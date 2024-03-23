@@ -1,4 +1,4 @@
-# MATH-219 Data Science Project
+# University of Delaware MATH-219 Data Science Project
 
 #### Data Provided by: Department of Education
 #### Dataset Owner: Delaware Open Data
@@ -18,38 +18,29 @@ In this report, I wanted to use a large, detailed dataset of Delaware students' 
 * PctProficient (quantitative)- The percent of students who earned an achievement level considered proficient. This is the number of students who earned a proficient achievement level divided by the number of students who tested
 * ScaleScoreAvg (quantitative)- The average scale score for the specified group of students
 
-The first analysis I performed to gain a general understanding of the data was a simple description of the summary statistics for the Tested, Proficient, PctProficient, and ScaleScoreAvg columns. 
-
 
 ## Preprocessing
 
+In order to begin my analyses, I had to clean and sort the data, remove columns that I did not intend to work with, and remove outliers to prevent the skewing of results and to allow for clearer graphs. This process resulted in the removal of approximately 1 million out of the initial 1.24 million rows and 11 out of the initial 18 columns. The removal of many categorical columns was for the purpose of staying within the scope of my desired endgoal and to maintain a much larger, more complex analysis.
 
 
 ## Summary data analysis
 
+The first analysis I performed to gain a general understanding of the data was a simple description of the summary statistics for the Tested, Proficient, PctProficient, and ScaleScoreAvg columns. Next, I wanted to look at the total counts and proportions of the unique values in the ContentArea and Grade categories. 
+
+Next is the graphical data, which I chose to examine the histograms of the Tested, Proficient, PctProficient, and ScaleScoreAvg columns to better understand how the values are distributed. These graphs show a count (y-axis) of the total number of samples that lie within various ranges along the x-axis. For example, the histogram of the Tested column displays its largest bar furthest to the left, meaning there are approximately 60,000 samples in which the value of the Tested columns is between approximately 0 and 20. 
+
+The next set of graphs will be barplots that incorporate the School Year column to compare how the Tested, Proficient, PctProficient, and ScaleScoreAvg columns differ from the years 2015 to 2023. 
+
+Now, the ContentArea and Grade categories will be utilized for analysis in boxen plots and correlations. Here, I chose to work with the PctProficient and ScaleScoreAvg columns and group by ContentArea and Grade to create 4 separate boxen plots. This allowed for further insight into the distributions of the PctProficient and ScaleScoreAvg when comparing between the different school subjects and grades. 
+
+Lastly, I intended to find the numerical values of the correlations School Year against PctProficient and ScaleScoreAvg overall, including when they are grouped by ContentArea and Grade for a total of 6 correlations. The overall correlations produced a single value of a Pearson correlation, whereas the correlations that were grouped by ContentArea and Grade produced a unique Pearson correlations value for each subject and grade respectively. This was done to determine how these unique correlations differ and if they were significant.
 
 
 ## Discussion
-### Pose two questions about this dataset that you could explore in future projects. One question should be about the prediction of a categorical outcome. For example:
 
-Do the occurrence rates of these 50 words predict whether an email is marked as spam?
-Do diagnosis, age, zip code, income, race, and gender predict whether cancer treatment is successful, as measured by 5-year survival rate?
-Do family size, income, postal code, GPA, and parents' education levels and occupations predict whether someone goes to college?
+This dataset leaves open a wide array of questions to be asked and further analyses to be explored that could not be investigated for this particular project. Here are a few questions I pose for potential further analysis or simply reflecting on:
 
+Does school year (time), number of tested students, percent of proficient students, and the scale score average of students' assessments impact the special demographics of students, such as low-income or homeless students?
 
-
-
-
-### The other question should be about the prediction of a quantitative outcome, such as:
-
-Can last year's team points scored, points allowed, and record, combined with this year's player retention and injury data, predict this year's record?
-Do a movie's length, genre, and release date, along with the popularity of its director and stars, predict its box office take?  
-
-### Note that these questions are not necessarily about cause and effect, simply about whether knowing some information allows you to deduce other information.
-
-## Some considerations:
-
-Your questions should be plausible and not propose nonsensical or impossible correlations.
-The proposed  predictions should be based on at least 4 quantitative features (i. e., dataset columns).
-Stay away from questions based on progression over time, such as stock prices. These often require different methods than the ones we will study. However, a before/after question might work, e. g., effects of the COVID-19 pandemic.
-Good questions are often about using mundane or readily available information to deduce something that is interesting and not obvious. But even a common-sense proposal could be worthwhile if it means quantifying an effect that "everybody knows."
+Can factors such as assessment type, race, gender, school year (time), number of tested students, number of proficient students, and the percent of proficiency influence the scale score average of students' assessments?
